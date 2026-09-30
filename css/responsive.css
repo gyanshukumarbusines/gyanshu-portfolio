@@ -1,0 +1,241 @@
+/* ==============================================================================
+   GYANSHU KUMAR - RESPONSIVE STYLESHEET
+   Breakpoints:
+   - Large Desktop: 1200px+
+   - Desktop / Laptop: 992px - 1199px
+   - Tablet: 768px - 991px
+   - Mobile: 767px and below
+   ============================================================================== */
+
+/* Tablet & Smaller (<= 991px) */
+@media (max-width: 991px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .hero-content {
+    align-items: center;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-socials {
+    justify-content: center;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .features-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Mobile & Small Tablet (<= 768px) */
+@media (max-width: 768px) {
+  html {
+    font-size: 15px;
+  }
+
+  .section {
+    padding: 4.5rem 0;
+  }
+
+  .section-title {
+    font-size: 1.85rem;
+  }
+
+  .hero-name {
+    font-size: 2.6rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+  }
+
+  /* Mobile Navigation Menu */
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 4.5rem;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 4.5rem);
+    background: var(--bg-surface);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2.5rem 2rem;
+    gap: 1.5rem;
+    border-top: 1px solid var(--border-subtle);
+    transform: translateX(100%);
+    transition: transform var(--transition-normal);
+    overflow-y: auto;
+    z-index: 999;
+  }
+
+  .nav-links.is-open {
+    transform: translateX(0);
+  }
+
+  .nav-link {
+    font-size: 1.2rem;
+    font-weight: 600;
+    width: 100%;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-subtle);
+  }
+
+  .nav-link.active::after {
+    bottom: -1px;
+    height: 3px;
+  }
+
+  .about-pillars {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .vision-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .journey-timeline::before {
+    left: 16px;
+  }
+
+  .timeline-item {
+    padding-left: 45px;
+  }
+
+  .timeline-node {
+    left: 6px;
+  }
+
+  /* Modal Mobile Adaptations */
+  .modal-overlay {
+    padding: 0.75rem;
+  }
+
+  .modal-dialog {
+    max-height: 94vh;
+  }
+
+  .modal-header {
+    padding: 1.25rem 1.25rem;
+  }
+
+  .modal-title {
+    font-size: 1.25rem;
+  }
+
+  .modal-body {
+    padding: 1.25rem;
+    gap: 1.5rem;
+  }
+
+  .modal-footer {
+    padding: 1rem 1.25rem;
+    flex-direction: column-reverse;
+    gap: 0.75rem;
+  }
+
+  .modal-footer .btn {
+    width: 100%;
+  }
+
+  /* Lightbox Mobile Adjustments */
+  .lightbox-prev {
+    left: 10px;
+    top: auto;
+    bottom: 20px;
+    transform: none;
+  }
+
+  .lightbox-next {
+    right: 10px;
+    top: auto;
+    bottom: 20px;
+    transform: none;
+  }
+
+  .lightbox-container {
+    max-width: 95vw;
+  }
+
+  .lightbox-image {
+    max-height: 65vh;
+  }
+
+  /* Footer Mobile */
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+}
+
+/* Extra Small Phones (<= 480px) */
+@media (max-width: 480px) {
+  .hero-name {
+    font-size: 2.15rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  .hero-socials {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .avatar-card {
+    width: 260px;
+    height: 260px;
+  }
+
+  .resume-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .resume-actions .btn {
+    width: 100%;
+  }
+}
